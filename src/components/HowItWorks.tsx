@@ -1,3 +1,4 @@
+
 import { Monitor, Link2, Search, CreditCard, CheckCircle } from "lucide-react";
 
 const steps = [
@@ -35,17 +36,28 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section className="py-20 bg-gradient-to-r from-muted via-background to-muted relative overflow-hidden">
-      {/* Background tech pattern */}
-      <div className="absolute inset-0 tech-pattern opacity-30"></div>
+    <section className="py-20 relative overflow-hidden">
+      {/* Background with workflow imagery */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80')`
+        }}
+      >
+        <div className="absolute inset-0 gradient-overlay"></div>
+        <div className="absolute inset-0 tech-pattern opacity-70"></div>
+      </div>
       
-      {/* Floating elements */}
-      <div className="absolute top-16 right-1/4 w-20 h-20 bg-primary/5 rounded-full blur-lg animate-pulse"></div>
-      <div className="absolute bottom-16 left-1/4 w-24 h-24 bg-accent/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      {/* Enhanced floating elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-16 right-1/4 w-28 h-28 bg-gradient-to-br from-primary/12 to-accent/8 rounded-full blur-2xl animate-pulse-soft"></div>
+        <div className="absolute bottom-16 left-1/4 w-32 h-32 bg-gradient-to-br from-success/10 to-warning/6 rounded-full blur-3xl animate-pulse-soft" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute top-1/3 right-1/6 w-20 h-20 bg-gradient-to-br from-accent/10 to-primary/6 rounded-full blur-xl animate-pulse-soft" style={{ animationDelay: '3s' }}></div>
+      </div>
       
       <div className="max-w-7xl mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4 gradient-text">
+          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4 gradient-text-vibrant">
             איך זה עובד?
           </h2>
           <p className="font-hebrew text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -57,38 +69,45 @@ export const HowItWorks = () => {
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="group relative animate-scale-in"
-              style={{ animationDelay: `${index * 0.2}s` }}
+              className="group relative animate-scale-in stagger-animation"
+              style={{ '--stagger': index } as React.CSSProperties}
             >
-              {/* Connection Line */}
+              {/* Enhanced Connection Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 right-0 w-full h-0.5 bg-gradient-to-r from-primary/50 to-accent/50 z-0 transform translate-x-1/2"></div>
+                <div className="hidden lg:block absolute top-16 right-0 w-full h-1 bg-gradient-to-r from-primary/60 via-accent/40 to-success/60 z-0 transform translate-x-1/2 rounded-full shadow-lg"></div>
               )}
               
-              {/* Step Card */}
-              <div className="relative z-10 glass-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border group-hover:border-primary/20 hover-lift">
-                {/* Step Number */}
-                <div className="absolute -top-4 right-4 w-8 h-8 bg-gradient-to-br from-primary to-accent text-white rounded-full flex items-center justify-center font-bold text-sm animate-glow">
+              {/* Enhanced Step Card */}
+              <div className="relative z-10 glass-card rounded-2xl p-6 shadow-xl hover:shadow-2xl transition-all duration-500 border border-border group-hover:border-primary/30 hover-lift hover-glow">
+                {/* Enhanced Step Number */}
+                <div className="absolute -top-4 right-4 w-10 h-10 bg-gradient-to-br from-primary via-accent to-success text-white rounded-full flex items-center justify-center font-bold text-sm animate-glow-soft shadow-lg">
                   {index + 1}
                 </div>
 
-                {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 mb-4 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300`}>
-                  <step.icon className={`h-8 w-8 ${step.color} group-hover:scale-110 transition-transform duration-300`} />
+                {/* Enhanced Icon */}
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/15 to-accent/12 mb-4 group-hover:from-primary/25 group-hover:to-accent/20 transition-all duration-500 shadow-lg`}>
+                  <step.icon className={`h-8 w-8 ${step.color} group-hover:scale-110 group-hover:text-accent transition-all duration-300`} />
                 </div>
 
-                {/* Content */}
-                <h3 className="font-hebrew font-semibold text-lg mb-3 leading-snug">
+                {/* Enhanced Content */}
+                <h3 className="font-hebrew font-semibold text-lg mb-3 leading-snug group-hover:text-primary transition-colors duration-300">
                   {step.title}
                 </h3>
-                <p className="font-hebrew text-muted-foreground text-sm leading-relaxed">
+                <p className="font-hebrew text-muted-foreground text-sm leading-relaxed group-hover:text-foreground transition-colors duration-300">
                   {step.description}
                 </p>
+
+                {/* Progress indicator */}
+                <div className="mt-4 w-full h-1 bg-muted rounded-full overflow-hidden">
+                  <div 
+                    className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
+                    style={{ width: `${((index + 1) / steps.length) * 100}%` }}
+                  ></div>
+                </div>
               </div>
             </div>
           ))}
         </div>
-
       </div>
     </section>
   );
