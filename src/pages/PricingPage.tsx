@@ -116,7 +116,16 @@ export const PricingPage = () => {
         structuredData={pricingStructuredData}
       />
       <Header />
-      <div className="min-h-screen bg-background py-12">
+      <div className="min-h-screen bg-background py-12 relative">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=20"
+            alt="רקע טכנולוגי"
+            className="w-full h-full object-cover opacity-5"
+          />
+        </div>
+        <div className="relative z-10">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 text-center mb-16">
         <h1 className="font-hebrew text-4xl md:text-5xl font-bold mb-6">
@@ -276,7 +285,8 @@ export const PricingPage = () => {
           </CardContent>
         </Card>
       </div>
-    </div>
+        </div>
+      </div>
     <Footer />
     </>
   );

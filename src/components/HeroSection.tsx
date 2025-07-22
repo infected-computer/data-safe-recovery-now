@@ -17,8 +17,8 @@ export const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <OptimizedImage 
-          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64" 
-          alt="שחזור קבצים מקצועי - רקע"
+          src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
+          alt="שחזור נתונים - מעגלים אלקטרוניים"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}
