@@ -137,7 +137,7 @@ export const PricingPage = () => {
           
           <div className="divide-y">
             {pricingPlans.map((plan, index) => (
-              <div key={index} className={`p-6 hover:bg-muted/30 transition-colors ${plan.popular ? 'bg-accent/5 border-r-4 border-accent' : ''}`}>
+              <div key={index} className="p-6 hover:bg-muted/30 transition-colors">
                 <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
                   <div className="flex-1">
                     <div className="flex items-center gap-3 mb-2">
@@ -170,11 +170,7 @@ export const PricingPage = () => {
                     <Button 
                       onClick={openWhatsApp}
                       size="sm"
-                      className={`font-hebrew ${
-                        plan.popular 
-                          ? 'bg-accent hover:bg-accent/90' 
-                          : 'bg-primary hover:bg-primary/90'
-                      }`}
+                      className="font-hebrew bg-primary hover:bg-primary/90"
                     >
                       קבל פרטים נוספים 
                     </Button>
