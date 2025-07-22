@@ -25,7 +25,7 @@ const trustItems = [
 
 export const TrustSection = () => {
   return (
-    <section className="py-20 bg-gradient-to-br from-primary-muted via-background to-accent/5 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-b from-background/80 via-background/95 to-background relative overflow-hidden">
       {/* Background decorative elements */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-1/4 w-40 h-40 bg-primary/10 rounded-full blur-2xl animate-pulse"></div>
@@ -49,7 +49,7 @@ export const TrustSection = () => {
               className="text-center group animate-scale-in hover-lift"
               style={{ animationDelay: `${index * 0.15}s` }}
             >
-              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full mb-6 group-hover:from-primary/30 group-hover:to-accent/20 transition-all duration-300 animate-glow">
+              <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-primary/20 to-accent/10 rounded-full mb-6 group-hover:from-primary/30 group-hover:to-accent/20 transition-all duration-300">
                 <item.icon className="h-10 w-10 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
               
