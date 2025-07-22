@@ -7,8 +7,8 @@ import { Footer } from "@/components/Footer";
 
 const stats = [
   { number: "7+", label: "שנות ניסיון", icon: Clock },
-  { number: "500+", label: "לקוחות מרוצים", icon: Users },
-  { number: "87%", label: "שיעור הצלחה", icon: Target },
+  { number: "1000+", label: "לקוחות מרוצים", icon: Users },
+  { number: "98%", label: "שיעור הצלחה", icon: Target },
   { number: "24/7", label: "זמינות", icon: Shield }
 ];
 

@@ -84,12 +84,12 @@ export const TestimonialsSection = () => {
             </div>
             <div className="w-px h-12 bg-border"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-success">500+</div>
+              <div className="text-3xl font-bold text-success">1000+</div>
               <div className="font-hebrew text-sm text-muted-foreground">לקוחות מרוצים</div>
             </div>
             <div className="w-px h-12 bg-border"></div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-accent">87%</div>
+              <div className="text-3xl font-bold text-accent">98%</div>
               <div className="font-hebrew text-sm text-muted-foreground">שיעור הצלחה</div>
             </div>
           </div>
