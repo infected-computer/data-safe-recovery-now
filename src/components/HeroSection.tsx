@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calculator } from "lucide-react";
-import heroImage from "@/assets/hero-recovery.jpg";
+import OptimizedImage from "@/components/OptimizedImage";
 
 export const HeroSection = () => {
   const scrollToForm = () => {
@@ -13,15 +13,18 @@ export const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden" aria-label="אזור ראשי">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img 
-          src={heroImage} 
-          alt="שחזור קבצים מקצועי"
+        <OptimizedImage 
+          src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64" 
+          alt="שחזור קבצים מקצועי - רקע"
           className="w-full h-full object-cover"
+          width={1920}
+          height={1080}
+          priority={true}
         />
-        <div className="absolute inset-0 bg-gradient-to-l from-primary/20 to-background/95"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-primary/20 to-background/95" aria-hidden="true"></div>
       </div>
 
       {/* Content */}
@@ -46,9 +49,10 @@ export const HeroSection = () => {
             <Button 
               onClick={scrollToForm}
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-hebrew text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-hebrew text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-accent/50"
+              aria-label="עבור לטופס יצירת קשר"
             >
-              <Calculator className="ml-2 h-5 w-5" />
+              <Calculator className="ml-2 h-5 w-5" aria-hidden="true" />
               שליחת פנייה
             </Button>
             
@@ -56,33 +60,34 @@ export const HeroSection = () => {
               onClick={openWhatsApp}
               variant="outline"
               size="lg"
-              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-hebrew text-lg px-8 py-6 rounded-full transition-all duration-300"
+              className="border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground font-hebrew text-lg px-8 py-6 rounded-full transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-primary/50"
+              aria-label="שלח הודעת WhatsApp"
             >
-              <MessageCircle className="ml-2 h-5 w-5" />
+              <MessageCircle className="ml-2 h-5 w-5" aria-hidden="true" />
               שליחת הודעת WhatsApp
             </Button>
           </div>
 
           {/* Trust Indicators */}
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-hebrew">
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-success rounded-full"></div>
-              100% שליטה מרחוק
+          <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-hebrew" role="list">
+            <div className="flex items-center gap-2" role="listitem">
+              <div className="w-2 h-2 bg-success rounded-full" aria-hidden="true"></div>
+              <span>100% שליטה מרחוק</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-success rounded-full"></div>
-              לקוחות פרטיים ועסקיים
+            <div className="flex items-center gap-2" role="listitem">
+              <div className="w-2 h-2 bg-success rounded-full" aria-hidden="true"></div>
+              <span>לקוחות פרטיים ועסקיים</span>
             </div>
-            <div className="flex items-center gap-2">
-              <div className="w-2 h-2 bg-success rounded-full"></div>
-              בדיקה ללא עלות
+            <div className="flex items-center gap-2" role="listitem">
+              <div className="w-2 h-2 bg-success rounded-full" aria-hidden="true"></div>
+              <span>בדיקה ללא עלות</span>
             </div>
           </div>
         </div>
       </div>
 
       {/* Scroll Indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce" aria-hidden="true">
         <div className="w-6 h-10 border-2 border-primary rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2"></div>
         </div>
