@@ -8,7 +8,7 @@ const trustItems = [
   },
   {
     icon: Shield,
-    title: "100% שליטה מרחוק",
+    title: "100% שחזור מרחוק",
     description: "לא צריך לצאת מהבית"
   },
   {
