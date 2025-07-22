@@ -33,16 +33,16 @@ export const HeroSection = () => {
         <div className="max-w-4xl mx-auto">
           {/* Main Headline */}
           <h1 className="font-hebrew text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-primary">דוקטור פיקס</span>
+            <span className="text-primary">שחזור קבצים מקצועי</span>
             <br />
-            <span className="text-foreground">שחזור מידע מהיר בלי לצאת מהבית</span>
+            <span className="text-foreground">בלי לצאת מהבית</span>
           </h1>
 
           {/* Sub-headline */}
-          <p className="font-hebrew text-xl md:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            <span className="text-accent font-semibold">שירות מיידי בשליטה מרחוק • אבחון ראשוני חינם • משלמים רק על הצלחה</span>
+          <p className="font-hebrew text-xl md:text-2xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+            שירות אמין, מהיר וללא הגעה פיזית
             <br />
-            <span className="text-sm md:text-lg mt-2 block">מעל 7 שנות ניסיון • 87% הצלחה • תהליך שקוף לחלוטין</span>
+            <span className="text-accent font-semibold">מעל 7 שנות ניסיון • 98% הצלחה</span>
           </p>
 
           {/* CTA Buttons */}
