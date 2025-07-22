@@ -142,10 +142,12 @@ export const ArticlesPage = () => {
                   <span className="font-hebrew">{articles[0].readTime}</span>
                 </div>
               </div>
-              <Button className="w-fit font-hebrew">
-                קרא עוד
-                <ArrowLeft className="mr-2 h-4 w-4" />
-              </Button>
+              <Link to={`/article/${articles[0].id}`}>
+                <Button className="w-fit font-hebrew">
+                  קרא עוד
+                  <ArrowLeft className="mr-2 h-4 w-4" />
+                </Button>
+              </Link>
             </div>
           </div>
         </Card>
@@ -155,7 +157,8 @@ export const ArticlesPage = () => {
       <div className="max-w-7xl mx-auto px-4 mb-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {articles.slice(1).map((article) => (
-            <Card key={article.id} className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
+            <Link key={article.id} to={`/article/${article.id}`}>
+            <Card className="overflow-hidden hover:shadow-lg transition-shadow cursor-pointer group">
               <div className="aspect-video overflow-hidden">
                 <img 
                   src={`https://images.unsplash.com/${article.image}?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80`}
@@ -194,6 +197,7 @@ export const ArticlesPage = () => {
                 </div>
               </CardContent>
             </Card>
+            </Link>
           ))}
         </div>
       </div>

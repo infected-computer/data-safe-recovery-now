@@ -12,6 +12,7 @@ const Index = lazy(() => import('./pages/Index'));
 const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
 const ProcessPage = lazy(() => import('./pages/ProcessPage'));
 const ArticlesPage = lazy(() => import('./pages/ArticlesPage').then(module => ({ default: module.ArticlesPage })));
+const ArticleDetailPage = lazy(() => import('./pages/ArticleDetailPage').then(module => ({ default: module.ArticleDetailPage })));
 const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then(module => ({ default: module.PrivacyPage })));
@@ -40,6 +41,7 @@ const App = () => (
               <Route path="/pricing" element={<PricingPage />} />
               <Route path="/process" element={<ProcessPage />} />
               <Route path="/articles" element={<ArticlesPage />} />
+              <Route path="/article/:id" element={<ArticleDetailPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
