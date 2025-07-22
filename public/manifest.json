@@ -1,0 +1,57 @@
+{
+  "name": "שחזור קבצים מקצועי",
+  "short_name": "שחזור קבצים",
+  "description": "שירותי שחזור קבצים מקצועיים מרחוק עם מעל 7 שנות ניסיון",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#1e3a8a",
+  "orientation": "portrait",
+  "lang": "he",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["business", "productivity", "utilities"],
+  "screenshots": [
+    {
+      "src": "/screenshot-1.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "דף הבית"
+    },
+    {
+      "src": "/screenshot-2.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "label": "תהליך העבודה"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "יצירת קשר",
+      "short_name": "קשר",
+      "description": "פנה אלינו לקבלת עזרה",
+      "url": "/contact",
+      "icons": [{ "src": "/contact-icon.png", "sizes": "96x96" }]
+    },
+    {
+      "name": "מחירון",
+      "short_name": "מחירים",
+      "description": "צפה במחירון השירותים",
+      "url": "/pricing",
+      "icons": [{ "src": "/pricing-icon.png", "sizes": "96x96" }]
+    }
+  ]
+}
