@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { MessageCircle, Calculator } from "lucide-react";
 import OptimizedImage from "@/components/OptimizedImage";
+import heroImage from "@/assets/hero-data-recovery.jpg";
 
 export const HeroSection = () => {
   const scrollToForm = () => {
@@ -17,8 +18,8 @@ export const HeroSection = () => {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <OptimizedImage 
-          src="https://images.unsplash.com/photo-1518770660439-4636190af475" 
-          alt="שחזור נתונים - מעגלים אלקטרוניים"
+          src={heroImage} 
+          alt="שחזור נתונים מקצועי - מעבדת שחזור"
           className="w-full h-full object-cover"
           width={1920}
           height={1080}

@@ -5,6 +5,7 @@ import { Check, Star, Zap, Shield } from "lucide-react";
 import SEO from "@/components/SEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import pricingBg from "@/assets/pricing-background.jpg";
 
 const pricingPlans = [
   {
@@ -120,8 +121,8 @@ export const PricingPage = () => {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img 
-            src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=20"
-            alt="רקע טכנולוגי"
+            src={pricingBg}
+            alt="רקע שחזור נתונים"
             className="w-full h-full object-cover opacity-5"
           />
         </div>
