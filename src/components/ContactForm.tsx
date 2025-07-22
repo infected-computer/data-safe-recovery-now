@@ -27,7 +27,7 @@ export const ContactForm = () => {
       const subject = "פנייה חדשה לשחזור קבצים";
       
       // Open email client
-      window.location.href = `mailto:egozkokus1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = `mailto:doctorfix79@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
       
       toast({
         title: "הפנייה נשלחה בהצלחה!",

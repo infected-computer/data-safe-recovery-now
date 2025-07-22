@@ -29,7 +29,7 @@ export const ContactPage = () => {
       const emailBody = `שם: ${formData.name}\nטלפון: ${formData.phone}\nאימייל: ${formData.email}\nנושא: ${formData.subject}\n\nהודעה:\n${formData.message}`;
       const subject = `פנייה חדשה: ${formData.subject}`;
       
-      window.location.href = `mailto:egozkokus1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = `mailto:doctorfix79@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
       
       toast({
         title: "הפנייה נשלחה בהצלחה!",
@@ -72,9 +72,9 @@ export const ContactPage = () => {
     {
       icon: Mail,
       title: "אימייל",
-      description: "egozkokus1@gmail.com",
+      description: "doctorfix79@gmail.com",
       action: "שלח אימייל",
-      onClick: () => window.location.href = 'mailto:egozkokus1@gmail.com'
+      onClick: () => window.location.href = 'mailto:doctorfix79@gmail.com'
     },
     {
       icon: Phone,

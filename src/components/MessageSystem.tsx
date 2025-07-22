@@ -23,7 +23,7 @@ export const MessageSystem = () => {
       const emailBody = `שם: ${name}\nטלפון: ${phone}\n\nהודעה:\n${message}`;
       const subject = "הודעה חדשה מהאתר - מערכת הודעות";
       
-      window.location.href = `mailto:egozkokus1@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
+      window.location.href = `mailto:doctorfix79@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(emailBody)}`;
       
       toast({
         title: "ההודעה נשלחה בהצלחה!",
