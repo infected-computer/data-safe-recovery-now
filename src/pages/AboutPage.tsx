@@ -156,10 +156,10 @@ export const AboutPage = () => {
                   כלי שחזור מתקדמים
                 </h3>
                 <ul className="font-hebrew text-sm text-muted-foreground space-y-1">
-                  <li>R-Studio Professional</li>
-                  <li>UFS Explorer</li>
-                  <li>PC-3000</li>
-                  <li>כלים מותאמים אישית</li>
+                  <li>אנו משתמשים בכלים</li>
+                  <li>המקצועיים ביותר</li>
+                  <li>וכן כלים מותאמים אישית</li>
+                  <li>שאותם פיתחנו במיוחד</li>
                 </ul>
               </div>
 
