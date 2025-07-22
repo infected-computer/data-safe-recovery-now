@@ -33,7 +33,7 @@ export const Header = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center gap-2 font-hebrew font-bold text-xl text-primary"
+            className="flex items-center gap-2 font-rubik font-bold text-xl text-primary"
             aria-label="דוקטור פיקס - דף הבית"
           >
             <HardDrive className="h-8 w-8" aria-hidden="true" />

@@ -145,58 +145,68 @@ export const PricingPage = () => {
         </p>
       </div>
 
-      {/* Pricing Plans */}
-      <div className="max-w-7xl mx-auto px-4 mb-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pricingPlans.map((plan, index) => (
-            <Card 
-              key={index}
-              className={`relative ${plan.color} ${plan.popular ? 'ring-2 ring-accent' : ''} hover:shadow-lg transition-shadow`}
-            >
-              {plan.popular && (
-                <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                  <Badge className="bg-accent text-accent-foreground font-hebrew">
-                    <Star className="ml-1 h-3 w-3" />
-                    הכי פופולרי
-                  </Badge>
+      {/* Service Pricing Table */}
+      <div className="max-w-5xl mx-auto px-4 mb-20">
+        <div className="bg-card rounded-lg border shadow-lg overflow-hidden">
+          <div className="bg-primary/5 px-6 py-4 border-b">
+            <h2 className="font-hebrew text-2xl font-bold text-center">
+              תעריפי שחזור קבצים
+            </h2>
+          </div>
+          
+          <div className="divide-y">
+            {pricingPlans.map((plan, index) => (
+              <div key={index} className={`p-6 hover:bg-muted/30 transition-colors ${plan.popular ? 'bg-accent/5 border-r-4 border-accent' : ''}`}>
+                <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4">
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <h3 className="font-hebrew text-xl font-semibold text-foreground">
+                        {plan.name}
+                      </h3>
+                      {plan.popular && (
+                        <Badge className="bg-accent text-accent-foreground font-hebrew text-xs">
+                          מומלץ
+                        </Badge>
+                      )}
+                    </div>
+                    <p className="font-hebrew text-muted-foreground mb-3">
+                      {plan.description}
+                    </p>
+                    <div className="flex flex-wrap gap-2">
+                      {plan.features.slice(0, 3).map((feature, featureIndex) => (
+                        <span key={featureIndex} className="inline-flex items-center gap-1 text-sm text-muted-foreground">
+                          <Check className="h-3 w-3 text-success" />
+                          <span className="font-hebrew">{feature}</span>
+                        </span>
+                      ))}
+                      {plan.features.length > 3 && (
+                        <span className="text-sm text-muted-foreground font-hebrew">
+                          +{plan.features.length - 3} נוספים
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-center gap-4 lg:flex-col lg:items-end lg:text-right">
+                    <div className="text-2xl lg:text-3xl font-bold text-primary">
+                      {plan.price}
+                    </div>
+                    <Button 
+                      onClick={openWhatsApp}
+                      size="sm"
+                      className={`font-hebrew ${
+                        plan.popular 
+                          ? 'bg-accent hover:bg-accent/90' 
+                          : 'bg-primary hover:bg-primary/90'
+                      }`}
+                    >
+                      פרטים נוספים
+                    </Button>
+                  </div>
                 </div>
-              )}
-              
-              <CardHeader className="text-center">
-                <CardTitle className="font-hebrew text-xl mb-2">
-                  {plan.name}
-                </CardTitle>
-                <div className="text-3xl font-bold text-primary mb-2">
-                  {plan.price}
-                </div>
-                <p className="font-hebrew text-sm text-muted-foreground">
-                  {plan.description}
-                </p>
-              </CardHeader>
-
-              <CardContent>
-                <ul className="space-y-3">
-                  {plan.features.map((feature, featureIndex) => (
-                    <li key={featureIndex} className="flex items-start gap-2">
-                      <Check className="h-4 w-4 text-success mt-0.5 flex-shrink-0" />
-                      <span className="font-hebrew text-sm">{feature}</span>
-                    </li>
-                  ))}
-                </ul>
-
-                <Button 
-                  onClick={openWhatsApp}
-                  className={`w-full mt-6 font-hebrew ${
-                    plan.popular 
-                      ? 'bg-accent hover:bg-accent/90' 
-                      : 'bg-primary hover:bg-primary/90'
-                  }`}
-                >
-                  קבל הצעת מחיר
-                </Button>
-              </CardContent>
-            </Card>
-          ))}
+              </div>
+            ))}
+          </div>
         </div>
       </div>
 
