@@ -81,24 +81,6 @@ export const HowItWorks = () => {
           ))}
         </div>
 
-        {/* Payment Explanation */}
-        <div className="mt-16 max-w-4xl mx-auto">
-          <div className="glass-card rounded-2xl p-8 border border-primary/20">
-            <div className="text-center">
-              <h3 className="font-hebrew text-2xl font-bold mb-4 text-primary">
-                תשלום מאובטח ושקוף
-              </h3>
-              <p className="font-hebrew text-lg text-muted-foreground mb-6">
-                לאחר אישור הלקוח, הוא מקבל לינק תשלום מאובטח (Paddle), 
-                ורק לאחר התשלום מתבצע השחזור המלא.
-              </p>
-              <div className="inline-flex items-center justify-center px-8 py-4 bg-accent/10 text-accent border border-accent/20 rounded-full font-hebrew font-semibold">
-                <CreditCard className="ml-2 h-5 w-5" />
-                תשלום לאחר שחזור
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );
