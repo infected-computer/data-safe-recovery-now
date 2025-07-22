@@ -56,7 +56,7 @@ export const ContactPage = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent("שלום, אני זקוק לעזרה בשחזור קבצים. אשמח לקבל ייעוץ ראשוני.");
-    window.open(`https://wa.me/972123456789?text=${message}`, '_blank');
+    window.open(`https://wa.me/972536657279?text=${message}`, '_blank');
   };
 
   const contactMethods = [
@@ -80,7 +80,7 @@ export const ContactPage = () => {
       title: "טלפון",
       description: "לשיחות דחופות",
       action: "התקשר עכשיו",
-      onClick: () => window.location.href = 'tel:+972123456789'
+      onClick: () => window.location.href = 'tel:+972536657279'
     }
   ];
 

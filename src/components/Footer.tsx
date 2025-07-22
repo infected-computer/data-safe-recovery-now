@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export const Footer = () => {
   const openWhatsApp = () => {
     const message = encodeURIComponent("שלום, אני זקוק לעזרה בשחזור קבצים. אשמח לקבל ייעוץ ראשוני.");
-    window.open(`https://wa.me/972123456789?text=${message}`, '_blank');
+    window.open(`https://wa.me/972536657279?text=${message}`, '_blank');
   };
 
   return (

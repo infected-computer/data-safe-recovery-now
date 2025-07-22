@@ -63,7 +63,7 @@ const additionalServices = [
 export const PricingPage = () => {
   const openWhatsApp = () => {
     const message = encodeURIComponent("שלום, אני מעוניין לקבל הצעת מחיר לשחזור קבצים. אשמח לפרטים.");
-    window.open(`https://wa.me/972123456789?text=${message}`, '_blank');
+    window.open(`https://wa.me/972536657279?text=${message}`, '_blank');
   };
 
   const pricingStructuredData = {

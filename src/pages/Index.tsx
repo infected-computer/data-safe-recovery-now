@@ -18,8 +18,8 @@ const Index = () => {
     "provider": {
       "@type": "LocalBusiness",
       "name": "דוקטור פיקס",
-      "telephone": "+972-123456789",
-      "email": "egozkokus1@gmail.com"
+      "telephone": "+972-536657279",
+      "email": "doctorfix79@gmail.com"
     },
     "offers": {
       "@type": "AggregateOffer",

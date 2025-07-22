@@ -148,7 +148,7 @@ export const ArticleDetailPage = () => {
 
   const openWhatsApp = () => {
     const message = encodeURIComponent(`שלום, קראתי את המאמר "${article?.title}" באתר ואני זקוק לעזרה בשחזור קבצים.`);
-    window.open(`https://wa.me/972123456789?text=${message}`, '_blank');
+    window.open(`https://wa.me/972536657279?text=${message}`, '_blank');
   };
 
   if (!article) {

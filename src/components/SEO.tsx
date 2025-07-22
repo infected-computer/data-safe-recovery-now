@@ -31,7 +31,7 @@ const SEO = ({
     "name": "שחזור קבצים מקצועי",
     "description": description,
     "url": siteUrl,
-    "telephone": "+972-123456789",
+    "telephone": "+972-536657279",
     "email": "egozkokus1@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -57,7 +57,7 @@ const SEO = ({
     "serviceType": ["שחזור קבצים", "שחזור נתונים", "שחזור מרחוק"],
     "paymentAccepted": ["Credit Card", "Bank Transfer"],
     "sameAs": [
-      "https://wa.me/972123456789"
+      "https://wa.me/972536657279"
     ]
   };
 
