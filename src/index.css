@@ -399,3 +399,4 @@
   .stagger-animation {
     animation-delay: calc(var(--stagger) * 0.1s);
   }
+}
