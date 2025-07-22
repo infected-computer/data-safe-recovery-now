@@ -176,7 +176,7 @@ export const PricingPage = () => {
                           : 'bg-primary hover:bg-primary/90'
                       }`}
                     >
-                      פרטים נוספים
+                      קבל פרטים נוספים 
                     </Button>
                   </div>
                 </div>
@@ -212,7 +212,7 @@ export const PricingPage = () => {
                   variant="outline" 
                   className="font-hebrew"
                 >
-                  פרטים נוספים
+                  קבל פרטים נוספים
                 </Button>
               </CardContent>
             </Card>
