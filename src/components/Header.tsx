@@ -6,6 +6,7 @@ import { Menu, X, HardDrive, MessageCircle } from "lucide-react";
 const navigation = [
   { name: "דף הבית", href: "/" },
   { name: "מחירון", href: "/pricing" },
+  { name: "איך זה עובד", href: "/process" },
   { name: "מאמרים", href: "/articles" },
   { name: "אודות", href: "/about" },
   { name: "יצירת קשר", href: "/contact" },
