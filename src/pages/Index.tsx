@@ -15,7 +15,7 @@ const Index = () => {
     "serviceType": "שחזור קבצים מרחוק",
     "provider": {
       "@type": "LocalBusiness",
-      "name": "שחזור קבצים מקצועי",
+      "name": "דוקטור פיקס",
       "telephone": "+972-123456789",
       "email": "egozkokus1@gmail.com"
     },
@@ -35,12 +35,12 @@ const Index = () => {
   return (
     <>
       <SEO 
-        title="שחזור קבצים מקצועי מרחוק | 87% הצלחה | בדיקה חינמית"
+        title="דוקטור פיקס - שחזור קבצים מקצועי מרחוק | 87% הצלחה | בדיקה חינמית"
         description="שירותי שחזור קבצים מקצועיים מרחוק עם מעל 7 שנות ניסיון. בדיקה חינמית, תשלום רק לאחר הצלחה. שחזור מחיקה בטעות, כוננים פגומים ועוד."
         keywords="שחזור קבצים, שחזור נתונים מרחוק, שחזור דיסק קשיח, שחזור מחיקה בטעות, R-Studio, AnyDesk, שחזור SSD"
         structuredData={structuredData}
       />
-      <div className="min-h-screen bg-background">
+      <div className="min-h-screen bg-background animate-page-enter">
         <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-primary-foreground px-4 py-2 rounded">
           דלג לתוכן הראשי
         </a>

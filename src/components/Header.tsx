@@ -34,10 +34,10 @@ export const Header = () => {
           <Link 
             to="/" 
             className="flex items-center gap-2 font-hebrew font-bold text-xl text-primary"
-            aria-label="שחזור קבצים מקצועי - דף הבית"
+            aria-label="דוקטור פיקס - דף הבית"
           >
             <HardDrive className="h-8 w-8" aria-hidden="true" />
-            שחזור קבצים מקצועי
+            דוקטור פיקס
           </Link>
 
           {/* Desktop Navigation */}
@@ -88,7 +88,7 @@ export const Header = () => {
         {isMenuOpen && (
           <nav 
             id="mobile-menu"
-            className="md:hidden border-t border-border bg-background"
+            className="md:hidden border-t border-border bg-background animate-slide-in-down"
             role="navigation"
             aria-label="ניווט ראשי - מובייל"
           >
