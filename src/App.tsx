@@ -1,44 +1,57 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { lazy, Suspense } from 'react';
+import React from 'react';
 
-// Simple loading component without external dependencies
-const SimpleLoader = () => (
-  <div style={{ 
-    display: 'flex', 
-    justifyContent: 'center', 
-    alignItems: 'center', 
-    height: '100vh',
-    fontFamily: 'Heebo, sans-serif'
-  }}>
-    טוען...
-  </div>
-);
-
-// Lazy load pages
-const Index = lazy(() => import('./pages/Index'));
-const PricingPage = lazy(() => import('./pages/PricingPage').then(module => ({ default: module.PricingPage })));
-const ArticlesPage = lazy(() => import('./pages/ArticlesPage').then(module => ({ default: module.ArticlesPage })));
-const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
-const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
-const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then(module => ({ default: module.PrivacyPage })));
-const TermsPage = lazy(() => import('./pages/TermsPage').then(module => ({ default: module.TermsPage })));
-const NotFound = lazy(() => import('./pages/NotFound'));
-
-const App = () => (
-  <BrowserRouter>
-    <Suspense fallback={<SimpleLoader />}>
-      <Routes>
-        <Route path="/" element={<Index />} />
-        <Route path="/pricing" element={<PricingPage />} />
-        <Route path="/articles" element={<ArticlesPage />} />
-        <Route path="/contact" element={<ContactPage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/privacy" element={<PrivacyPage />} />
-        <Route path="/terms" element={<TermsPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </Suspense>
-  </BrowserRouter>
-);
+const App = () => {
+  return (
+    <div style={{ 
+      padding: '20px', 
+      fontFamily: 'Heebo, sans-serif',
+      textAlign: 'center' as const,
+      background: '#f5f5f5',
+      minHeight: '100vh',
+      display: 'flex',
+      flexDirection: 'column' as const,
+      justifyContent: 'center' as const,
+      alignItems: 'center' as const
+    }}>
+      <h1 style={{ color: '#1e3a8a', marginBottom: '20px', fontSize: '2rem' }}>
+        שחזור קבצים מקצועי
+      </h1>
+      <p style={{ color: '#4b5563', fontSize: '1.2rem', marginBottom: '30px' }}>
+        בדיקת תקינות האתר...
+      </p>
+      <div style={{ 
+        background: 'white', 
+        padding: '20px', 
+        borderRadius: '8px',
+        boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+        maxWidth: '400px'
+      }}>
+        <p style={{ color: '#059669', fontWeight: 'bold', marginBottom: '10px' }}>
+          ✅ React עובד כראוי
+        </p>
+        <p style={{ color: '#6b7280', fontSize: '0.9rem' }}>
+          האתר נטען בהצלחה ללא שגיאות
+        </p>
+        <button 
+          style={{
+            background: '#25D366',
+            color: 'white',
+            padding: '10px 20px',
+            border: 'none',
+            borderRadius: '5px',
+            marginTop: '15px',
+            cursor: 'pointer',
+            fontSize: '1rem'
+          }}
+          onClick={() => {
+            window.open('https://wa.me/972123456789?text=' + encodeURIComponent('שלום, אני זקוק לעזרה בשחזור קבצים'), '_blank');
+          }}
+        >
+          📱 פנה בוואטסאפ
+        </button>
+      </div>
+    </div>
+  );
+};
 
 export default App;
