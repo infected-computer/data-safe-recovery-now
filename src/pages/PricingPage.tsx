@@ -29,7 +29,7 @@ const pricingPlans = [
       "דיסקים אונקיים USB",
       "SSD חיצוניים",
     ],
-    popular: true,
+    popular: false,
     color: "border-accent"
   },
   {
