@@ -1,25 +1,25 @@
-import { Shield, Clock, Eye, Zap } from "lucide-react";
+import { Shield, Clock, Users, Award } from "lucide-react";
 
 const trustItems = [
   {
-    icon: Zap,
-    title: "מהירות",
-    description: "שירות מיידי מרחוק ללא המתנה"
+    icon: Clock,
+    title: "מעל 7 שנות ניסיון",
+    description: "בשחזור קבצים מרחוק"
   },
   {
     icon: Shield,
-    title: "נוחות",
-    description: "בלי לנסוע למעבדה - הכל מהבית"
+    title: "100% שחזור מרחוק",
+    description: "לא צריך לצאת מהבית"
   },
   {
-    icon: Eye,
-    title: "ביטחון",
-    description: "תהליך שקוף מול עיני הלקוח"
+    icon: Users,
+    title: "לקוחות פרטיים ועסקיים",
+    description: "שירות מותאם לכל צורך"
   },
   {
-    icon: Clock,
-    title: "אמינות",
-    description: "תשלום מבוסס הצלחה בלבד"
+    icon: Award,
+    title: "87% שיעור הצלחה",
+    description: "תוצאות מוכחות"
   }
 ];
 
