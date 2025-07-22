@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Award, Shield, Users, Clock, Target, CheckCircle, MessageCircle } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 const stats = [
   { number: "7+", label: "שנות ניסיון", icon: Clock },
@@ -214,6 +215,7 @@ export const AboutPage = () => {
       </div>
     </div>
     <Footer />
+    <WhatsAppFloat />
     </>
   );
 };

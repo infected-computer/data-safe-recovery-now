@@ -5,6 +5,7 @@ import { Check, Star, Zap, Shield } from "lucide-react";
 import SEO from "@/components/SEO";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import pricingBg from "@/assets/pricing-background.jpg";
 
 const pricingPlans = [
@@ -269,6 +270,7 @@ export const PricingPage = () => {
         </div>
       </div>
     <Footer />
+    <WhatsAppFloat />
     </>
   );
 };

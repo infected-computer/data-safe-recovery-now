@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, Clock, User, ArrowRight, ArrowLeft, Share2 } from "lucide-react";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import SEO from "@/components/SEO";
 
 const articles = {
@@ -164,6 +165,7 @@ export const ArticleDetailPage = () => {
           </div>
         </div>
         <Footer />
+        <WhatsAppFloat />
       </>
     );
   }
@@ -264,6 +266,7 @@ export const ArticleDetailPage = () => {
         </div>
       </div>
       <Footer />
+      <WhatsAppFloat />
     </>
   );
 };

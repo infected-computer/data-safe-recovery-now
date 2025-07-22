@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 import { HowItWorks } from "@/components/HowItWorks";
 import SEO from "@/components/SEO";
 
@@ -28,6 +29,7 @@ const ProcessPage = () => {
           <HowItWorks />
         </main>
         <Footer />
+        <WhatsAppFloat />
       </div>
     </>
   );

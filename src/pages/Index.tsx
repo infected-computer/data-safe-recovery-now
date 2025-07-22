@@ -8,6 +8,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { ContactForm } from "@/components/ContactForm";
 import { Footer } from "@/components/Footer";
 import { WhatsAppFloat } from "@/components/WhatsAppFloat";
+import { MessageSystem } from "@/components/MessageSystem";
 import SEO from "@/components/SEO";
 
 const Index = () => {
@@ -58,6 +59,7 @@ const Index = () => {
         </main>
         <Footer />
         <WhatsAppFloat />
+        <MessageSystem />
       </div>
     </>
   );

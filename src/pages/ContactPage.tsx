@@ -8,6 +8,7 @@ import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
 import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { WhatsAppFloat } from "@/components/WhatsAppFloat";
 
 export const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -329,6 +330,7 @@ export const ContactPage = () => {
       </div>
     </div>
     <Footer />
+    <WhatsAppFloat />
     </>
   );
 };
