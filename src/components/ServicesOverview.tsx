@@ -31,10 +31,15 @@ const services = [
 
 export const ServicesOverview = () => {
   return (
-    <section className="py-20 bg-background">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4">
+    <section className="py-20 bg-gradient-overlay relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0 tech-pattern opacity-50"></div>
+      <div className="absolute top-10 left-10 w-32 h-32 bg-primary/5 rounded-full blur-xl"></div>
+      <div className="absolute bottom-10 right-10 w-24 h-24 bg-accent/5 rounded-full blur-lg"></div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4 gradient-text">
             השירותים שלנו
           </h2>
           <p className="font-hebrew text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -46,11 +51,12 @@ export const ServicesOverview = () => {
           {services.map((service, index) => (
             <div 
               key={index}
-              className="group bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/20"
+              className="group glass-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border hover:border-primary/20 hover-lift animate-scale-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
             >
               {/* Icon */}
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-6 group-hover:bg-primary/20 transition-colors">
-                <service.icon className="h-8 w-8 text-primary" />
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-primary/10 to-accent/10 rounded-2xl mb-6 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300 animate-glow">
+                <service.icon className="h-8 w-8 text-primary group-hover:scale-110 transition-transform duration-300" />
               </div>
 
               {/* Title & Description */}
@@ -75,18 +81,18 @@ export const ServicesOverview = () => {
         </div>
 
         {/* CTA Section */}
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 border border-primary/20">
-            <h3 className="font-hebrew text-2xl font-bold mb-4 text-foreground">
+        <div className="mt-16 text-center animate-slide-up">
+          <div className="glass-card gradient-bg rounded-2xl p-8 border border-primary/20 text-white hover-lift">
+            <h3 className="font-hebrew text-2xl font-bold mb-4">
               רוצה לדעת איך התהליך עובד?
             </h3>
-            <p className="font-hebrew text-lg text-muted-foreground mb-6 max-w-2xl mx-auto">
+            <p className="font-hebrew text-lg mb-6 max-w-2xl mx-auto opacity-90">
               צפה בהסבר המפורט עם צילומי מסך של כל שלב בתהליך שחזור הקבצים
             </p>
             <Button 
               asChild
               size="lg"
-              className="bg-primary hover:bg-primary/90 text-primary-foreground font-hebrew text-lg px-8 py-6 rounded-full"
+              className="bg-white text-primary hover:bg-white/90 font-hebrew text-lg px-8 py-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300"
             >
               <Link to="/process">
                 צפה בתהליך המלא

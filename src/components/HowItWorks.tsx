@@ -35,10 +35,17 @@ const steps = [
 
 export const HowItWorks = () => {
   return (
-    <section className="py-20 bg-muted">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4">
+    <section className="py-20 bg-gradient-to-r from-muted via-background to-muted relative overflow-hidden">
+      {/* Background tech pattern */}
+      <div className="absolute inset-0 tech-pattern opacity-30"></div>
+      
+      {/* Floating elements */}
+      <div className="absolute top-16 right-1/4 w-20 h-20 bg-primary/5 rounded-full blur-lg animate-pulse"></div>
+      <div className="absolute bottom-16 left-1/4 w-24 h-24 bg-accent/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1.5s' }}></div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4 gradient-text">
             איך זה עובד?
           </h2>
           <p className="font-hebrew text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -50,23 +57,24 @@ export const HowItWorks = () => {
           {steps.map((step, index) => (
             <div 
               key={index}
-              className="group relative"
+              className="group relative animate-scale-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               {/* Connection Line */}
               {index < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-16 right-0 w-full h-0.5 bg-border z-0 transform translate-x-1/2"></div>
+                <div className="hidden lg:block absolute top-16 right-0 w-full h-0.5 bg-gradient-to-r from-primary/50 to-accent/50 z-0 transform translate-x-1/2"></div>
               )}
               
               {/* Step Card */}
-              <div className="relative z-10 bg-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border group-hover:border-primary/20">
+              <div className="relative z-10 glass-card rounded-2xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-border group-hover:border-primary/20 hover-lift">
                 {/* Step Number */}
-                <div className="absolute -top-4 right-4 w-8 h-8 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold text-sm">
+                <div className="absolute -top-4 right-4 w-8 h-8 bg-gradient-to-br from-primary to-accent text-white rounded-full flex items-center justify-center font-bold text-sm animate-glow">
                   {index + 1}
                 </div>
 
                 {/* Icon */}
-                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-primary/10 mb-4 group-hover:bg-primary/20 transition-colors`}>
-                  <step.icon className={`h-8 w-8 ${step.color}`} />
+                <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 mb-4 group-hover:from-primary/20 group-hover:to-accent/20 transition-all duration-300`}>
+                  <step.icon className={`h-8 w-8 ${step.color} group-hover:scale-110 transition-transform duration-300`} />
                 </div>
 
                 {/* Content */}

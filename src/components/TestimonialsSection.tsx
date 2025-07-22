@@ -29,10 +29,16 @@ const testimonials = [
 
 export const TestimonialsSection = () => {
   return (
-    <section className="py-20 bg-muted">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4">
+    <section className="py-20 bg-gradient-to-b from-background via-muted/50 to-background relative overflow-hidden">
+      {/* Background decorative elements */}
+      <div className="absolute inset-0">
+        <div className="absolute top-32 right-10 w-28 h-28 bg-accent/10 rounded-full blur-lg animate-pulse"></div>
+        <div className="absolute bottom-32 left-10 w-36 h-36 bg-primary/5 rounded-full blur-xl animate-pulse" style={{ animationDelay: '2s' }}></div>
+      </div>
+      
+      <div className="max-w-7xl mx-auto px-4 relative z-10">
+        <div className="text-center mb-16 animate-fade-in">
+          <h2 className="font-hebrew text-3xl md:text-4xl font-bold mb-4 gradient-text">
             מה אומרים הלקוחות שלנו?
           </h2>
           <p className="font-hebrew text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -44,10 +50,13 @@ export const TestimonialsSection = () => {
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-border"
+              className="glass-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border border-border hover-lift animate-scale-in"
+              style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="flex items-start gap-4">
-                <Quote className="h-8 w-8 text-primary mt-1 flex-shrink-0" />
+                <div className="bg-gradient-to-br from-primary/20 to-accent/10 rounded-full p-2">
+                  <Quote className="h-6 w-6 text-primary flex-shrink-0" />
+                </div>
                 <div className="flex-1">
                   <p className="font-hebrew text-lg text-foreground mb-6 leading-relaxed">
                     "{testimonial.text}"
@@ -76,10 +85,10 @@ export const TestimonialsSection = () => {
         </div>
 
         {/* Overall Stats */}
-        <div className="mt-16 text-center">
-          <div className="inline-flex items-center gap-8 bg-card rounded-2xl p-8 shadow-lg">
+        <div className="mt-16 text-center animate-slide-up">
+          <div className="inline-flex items-center gap-8 glass-card rounded-2xl p-8 shadow-lg hover-lift">
             <div className="text-center">
-              <div className="text-3xl font-bold text-primary">4.9/5</div>
+              <div className="text-3xl font-bold gradient-text">4.9/5</div>
               <div className="font-hebrew text-sm text-muted-foreground">דירוג ממוצע</div>
             </div>
             <div className="w-px h-12 bg-border"></div>
