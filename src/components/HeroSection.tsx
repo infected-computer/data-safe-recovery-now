@@ -73,7 +73,7 @@ export const HeroSection = () => {
           <div className="flex flex-wrap justify-center gap-6 text-sm text-muted-foreground font-hebrew" role="list">
             <div className="flex items-center gap-2" role="listitem">
               <div className="w-2 h-2 bg-success rounded-full" aria-hidden="true"></div>
-              <span>100% שחזור מהבית</span>
+              <span>100% מהבית</span>
             </div>
             <div className="flex items-center gap-2" role="listitem">
               <div className="w-2 h-2 bg-success rounded-full" aria-hidden="true"></div>
