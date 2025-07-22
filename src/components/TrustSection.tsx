@@ -18,7 +18,7 @@ const trustItems = [
   },
   {
     icon: Award,
-    title: "98% שיעור הצלחה",
+    title: "87% שיעור הצלחה",
     description: "תוצאות מוכחות"
   }
 ];
@@ -60,7 +60,7 @@ export const TrustSection = () => {
         {/* Statistics */}
         <div className="mt-20 grid grid-cols-1 md:grid-cols-3 gap-8">
           <div className="text-center p-8 bg-card rounded-2xl shadow-lg">
-            <div className="text-4xl font-bold text-primary mb-2">500+</div>
+            <div className="text-4xl font-bold text-primary mb-2">10000+</div>
             <div className="font-hebrew text-lg text-muted-foreground">לקוחות מרוצים</div>
           </div>
           
