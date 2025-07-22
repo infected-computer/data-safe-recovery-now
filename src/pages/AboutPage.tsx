@@ -35,34 +35,6 @@ const values = [
   }
 ];
 
-const timeline = [
-  {
-    year: "2017",
-    title: "התחלה",
-    description: "התחלתי לעבוד בתחום שחזור הנתונים כטכנאי במעבדה מקומית"
-  },
-  {
-    year: "2019",
-    title: "התמחות",
-    description: "השתלמתי בכלים מתקדמים כמו R-Studio ו-UFS Explorer"
-  },
-  {
-    year: "2021",
-    title: "מעבר לעצמאות",
-    description: "פתחתי שירות עצמאי עם התמחות בשחזור מרחוק"
-  },
-  {
-    year: "2022",
-    title: "הרחבת השירותים",
-    description: "הוספתי שירותי גיבוי וייעוץ אבטחת מידע"
-  },
-  {
-    year: "2024",
-    title: "היום",
-    description: "משרת מאות לקוחות עם מערכת עבודה מרחוק מתקדמת"
-  }
-];
-
 export const AboutPage = () => {
   const openWhatsApp = () => {
     const message = encodeURIComponent("שלום, אני מעוניין לשמוע יותר על השירותים שלכם.");
@@ -127,26 +99,6 @@ export const AboutPage = () => {
                 יקרות, שחזור מסמכים עסקיים חיוניים, והצלת פרויקטים שלמים.
               </p>
             </div>
-          </div>
-          
-          <div className="space-y-6">
-            {timeline.map((item, index) => (
-              <div key={index} className="flex items-start gap-4">
-                <div className="flex-shrink-0">
-                  <Badge className="bg-primary text-primary-foreground">
-                    {item.year}
-                  </Badge>
-                </div>
-                <div>
-                  <h3 className="font-hebrew font-semibold text-lg mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="font-hebrew text-muted-foreground text-sm">
-                    {item.description}
-                  </p>
-                </div>
-              </div>
-            ))}
           </div>
         </div>
       </div>
