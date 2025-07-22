@@ -147,11 +147,6 @@ export const PricingPage = () => {
                       <h3 className="font-hebrew text-xl font-semibold text-foreground">
                         {plan.name}
                       </h3>
-                      {plan.popular && (
-                        <Badge className="bg-accent text-accent-foreground font-hebrew text-xs">
-                          מומלץ
-                        </Badge>
-                      )}
                     </div>
                     <p className="font-hebrew text-muted-foreground mb-3">
                       {plan.description}
