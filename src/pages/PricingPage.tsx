@@ -282,5 +282,6 @@ export const PricingPage = () => {
         </Card>
       </div>
     </div>
+    </>
   );
 };
