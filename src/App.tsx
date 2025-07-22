@@ -17,6 +17,7 @@ const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ d
 const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ default: module.AboutPage })));
 const PrivacyPage = lazy(() => import('./pages/PrivacyPage').then(module => ({ default: module.PrivacyPage })));
 const TermsPage = lazy(() => import('./pages/TermsPage').then(module => ({ default: module.TermsPage })));
+const PaymentPage = lazy(() => import('./pages/PaymentPage'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 const queryClient = new QueryClient({
@@ -46,6 +47,7 @@ const App = () => (
               <Route path="/about" element={<AboutPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
               <Route path="/terms" element={<TermsPage />} />
+              <Route path="/payment-secret" element={<PaymentPage />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </Suspense>
