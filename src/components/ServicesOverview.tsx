@@ -7,7 +7,7 @@ const services = [
     icon: HardDrive,
     title: "שחזור דיסק קשיח",
     description: "שחזור קבצים מדיסקים קשיחים פגומים או מקולקלים",
-    features: ["HDD ו-SSD", "נזק פיזי או לוגי", "כל הגדלים"]
+    features: ["HDD ו-SSD", "נזק לוגי", "כל הגדלים"]
   },
   {
     icon: FileX,
@@ -16,28 +16,16 @@ const services = [
     features: ["מחיקה ידנית", "ניקוי אוטומטי", "פורמט בטעות"]
   },
   {
-    icon: Smartphone,
-    title: "מכשירים ניידים",
-    description: "שחזור נתונים מטלפונים וטאבלטים",
-    features: ["Android ו-iOS", "כרטיסי זיכרון", "זיכרון פנימי"]
+    icon: HardDrive,
+    title: "כרטיסי זיכרון",
+    description: "שחזור מכרטיסי זיכרון ודיסקים אונקיים",
+    features: ["SD ו-MicroSD", "כרטיסי CF", "דיסקים אונקיים"]
   },
   {
     icon: Monitor,
-    title: "מחשבים נייחים ונישאים",
-    description: "שחזור מכל סוגי המחשבים והמערכות",
-    features: ["Windows ו-Mac", "Linux", "מערכות ישנות"]
-  },
-  {
-    icon: Database,
-    title: "שרתים ובסיסי נתונים",
-    description: "שחזור נתונים ממערכות עסקיות מתקדמות",
-    features: ["SQL Server", "MySQL", "RAID Arrays"]
-  },
-  {
-    icon: Zap,
-    title: "נזק חשמלי",
-    description: "שחזור לאחר נזק מחשמל או ברק",
-    features: ["נזק לוח אם", "התחממות יתר", "כיבוי פתאומי"]
+    title: "מחשבים אישיים",
+    description: "שחזור מכל סוגי המחשבים האישיים",
+    features: ["Windows ו-Mac", "Linux", "מחשבים ביתיים"]
   }
 ];
 
