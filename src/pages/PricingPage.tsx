@@ -17,7 +17,6 @@ const pricingPlans = [
       "הערכת זמן העבודה",
       "ייעוץ טכני מקצועי"
     ],
-    popular: false,
     color: "border-primary"
   },
   {
@@ -29,7 +28,6 @@ const pricingPlans = [
       "דיסקים אונקיים USB",
       "SSD חיצוניים",
     ],
-    popular: false,
     color: "border-accent"
   },
   {
@@ -40,7 +38,6 @@ const pricingPlans = [
       "דיסקים קשיחים HDD ו-SSD",
       "שחזור מטא-דאטה ומבנה תיקיות"
     ],
-    popular: false,
     color: "border-warning"
   }
 ];
