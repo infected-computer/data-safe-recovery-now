@@ -18,7 +18,7 @@ const trustItems = [
   },
   {
     icon: Award,
-    title: "87% שיעור הצלחה",
+    title: "98% שיעור הצלחה",
     description: "תוצאות מוכחות"
   }
 ];
@@ -65,7 +65,7 @@ export const TrustSection = () => {
           </div>
           
           <div className="text-center p-8 bg-card rounded-2xl shadow-lg">
-            <div className="text-4xl font-bold text-success mb-2">87%</div>
+            <div className="text-4xl font-bold text-success mb-2">98%</div>
             <div className="font-hebrew text-lg text-muted-foreground">שיעור הצלחה</div>
           </div>
           
