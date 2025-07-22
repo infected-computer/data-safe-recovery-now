@@ -6,6 +6,8 @@ import { Label } from "@/components/ui/label";
 import { MapPin, Phone, Mail, Clock, MessageCircle, User, FileText, Send } from "lucide-react";
 import { useState } from "react";
 import { toast } from "@/hooks/use-toast";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 export const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -83,7 +85,9 @@ export const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-background py-12">
+    <>
+      <Header />
+      <div className="min-h-screen bg-background py-12">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 text-center mb-16">
         <h1 className="font-hebrew text-4xl md:text-5xl font-bold mb-6">
@@ -324,5 +328,7 @@ export const ContactPage = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };

@@ -1,6 +1,11 @@
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
+
 export const TermsPage = () => {
   return (
-    <div className="min-h-screen bg-background py-12">
+    <>
+      <Header />
+      <div className="min-h-screen bg-background py-12">
       <div className="max-w-4xl mx-auto px-4">
         <h1 className="font-hebrew text-4xl font-bold mb-8 text-center">
           תנאי שימוש
@@ -184,5 +189,7 @@ export const TermsPage = () => {
         </div>
       </div>
     </div>
+    <Footer />
+    </>
   );
 };

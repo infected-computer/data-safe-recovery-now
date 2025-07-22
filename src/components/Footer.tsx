@@ -1,5 +1,6 @@
-import { MessageCircle, Mail, Clock, Download } from "lucide-react";
+import { MessageCircle, Mail, Clock, Download, Home, FileText, Users, DollarSign } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const openWhatsApp = () => {
@@ -10,7 +11,7 @@ export const Footer = () => {
   return (
     <footer className="bg-foreground text-background py-16">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           
           {/* Contact Info */}
           <div className="lg:col-span-2">
@@ -32,6 +33,55 @@ export const Footer = () => {
                 <Clock className="h-5 w-5" />
                 <span className="font-hebrew">ראשון-חמישי: 09:00-18:00</span>
               </div>
+            </div>
+          </div>
+
+          {/* Navigation Links */}
+          <div>
+            <h4 className="font-hebrew text-lg font-semibold mb-6">
+              קישורים מהירים
+            </h4>
+            
+            <div className="space-y-3">
+              <Link 
+                to="/" 
+                className="flex items-center gap-2 text-background/80 hover:text-background transition-colors"
+              >
+                <Home className="h-4 w-4" />
+                <span className="font-hebrew">דף הבית</span>
+              </Link>
+              
+              <Link 
+                to="/pricing" 
+                className="flex items-center gap-2 text-background/80 hover:text-background transition-colors"
+              >
+                <DollarSign className="h-4 w-4" />
+                <span className="font-hebrew">מחירון</span>
+              </Link>
+              
+              <Link 
+                to="/about" 
+                className="flex items-center gap-2 text-background/80 hover:text-background transition-colors"
+              >
+                <Users className="h-4 w-4" />
+                <span className="font-hebrew">אודותינו</span>
+              </Link>
+              
+              <Link 
+                to="/articles" 
+                className="flex items-center gap-2 text-background/80 hover:text-background transition-colors"
+              >
+                <FileText className="h-4 w-4" />
+                <span className="font-hebrew">מאמרים</span>
+              </Link>
+              
+              <Link 
+                to="/contact" 
+                className="flex items-center gap-2 text-background/80 hover:text-background transition-colors"
+              >
+                <Mail className="h-4 w-4" />
+                <span className="font-hebrew">יצירת קשר</span>
+              </Link>
             </div>
           </div>
 
@@ -59,6 +109,31 @@ export const Footer = () => {
                 <Download className="ml-2 h-4 w-4" />
                 הורדת AnyDesk
               </Button>
+            </div>
+          </div>
+
+          {/* Legal Links */}
+          <div>
+            <h4 className="font-hebrew text-lg font-semibold mb-6">
+              מידע משפטי
+            </h4>
+            
+            <div className="space-y-3">
+              <Link 
+                to="/terms" 
+                className="flex items-center gap-2 text-background/80 hover:text-background transition-colors"
+              >
+                <FileText className="h-4 w-4" />
+                <span className="font-hebrew">תנאי שימוש</span>
+              </Link>
+              
+              <Link 
+                to="/privacy" 
+                className="flex items-center gap-2 text-background/80 hover:text-background transition-colors"
+              >
+                <FileText className="h-4 w-4" />
+                <span className="font-hebrew">מדיניות פרטיות</span>
+              </Link>
             </div>
           </div>
 

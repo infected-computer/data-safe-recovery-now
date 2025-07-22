@@ -3,6 +3,8 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Shield } from "lucide-react";
 import SEO from "@/components/SEO";
+import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 
 const pricingPlans = [
   {
@@ -131,6 +133,7 @@ export const PricingPage = () => {
         keywords="מחירון שחזור קבצים, עלות שחזור נתונים, מחיר שחזור דיסק קשיח, תעריפי שחזור"
         structuredData={pricingStructuredData}
       />
+      <Header />
       <div className="min-h-screen bg-background py-12">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 text-center mb-16">
@@ -282,6 +285,7 @@ export const PricingPage = () => {
         </Card>
       </div>
     </div>
+    <Footer />
     </>
   );
 };
