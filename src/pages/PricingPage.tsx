@@ -4,7 +4,87 @@ import { Badge } from "@/components/ui/badge";
 import { Check, Star, Zap, Shield } from "lucide-react";
 import SEO from "@/components/SEO";
 
-// ... rest of the pricing data ...
+const pricingPlans = [
+  {
+    name: "בדיקה ראשונית",
+    price: "חינם",
+    description: "הערכת סיכויי השחזור ללא עלות",
+    features: [
+      "חיבור מרחוק עם AnyDesk",
+      "סריקה עם R-Studio גרסת דמו",
+      "הצגת רשימת קבצים ניתנים לשחזור",
+      "הערכת זמן עבודה נדרש",
+      "ייעוץ מקצועי"
+    ],
+    popular: false,
+    color: "border-primary"
+  },
+  {
+    name: "שחזור בסיסי",
+    price: "₪350-₪600",
+    description: "לקבצים רגילים ובעיות פשוטות",
+    features: [
+      "כל שירותי הבדיקה הראשונית",
+      "שחזור עד 100GB נתונים",
+      "קבצים שנמחקו בטעות",
+      "פרטיציות פגומות",
+      "תמיכה במהלך התהליך",
+      "אחריות לתוצאה"
+    ],
+    popular: true,
+    color: "border-accent"
+  },
+  {
+    name: "שחזור מתקדם",
+    price: "₪700-₪1200",
+    description: "למקרים מורכבים וכמויות גדולות",
+    features: [
+      "כל שירותי החבילה הבסיסית",
+      "שחזור עד 500GB נתונים",
+      "כוננים קשיחים פגומים",
+      "מערכות RAID",
+      "קבצים בפורמטים מיוחדים",
+      "שחזור מטא-דאטה",
+      "תעדוף גבוה"
+    ],
+    popular: false,
+    color: "border-warning"
+  },
+  {
+    name: "שחזור ארגוני",
+    price: "לפי הצעת מחיר",
+    description: "לעסקים וכמויות גדולות",
+    features: [
+      "כל השירותים המתקדמים",
+      "ללא הגבלת נפח",
+      "סרברים ומערכות ארגוניות",
+      "שירות 24/7",
+      "SLA מובטח",
+      "ייעוץ מניעה",
+      "הדרכה לצוות"
+    ],
+    popular: false,
+    color: "border-success"
+  }
+];
+
+const additionalServices = [
+  {
+    title: "התקנת מערכות גיבוי",
+    price: "₪200-₪500",
+    description: "הקמת מערכת גיבוי אוטומטית למניעת אובדן נתונים עתידי"
+  },
+  {
+    title: "ייעוץ אבטחת מידע",
+    price: "₪300/שעה",
+    description: "הערכת סיכונים והמלצות להגנה על הנתונים"
+  },
+  {
+    title: "הדרכה אישית",
+    price: "₪250/שעה",
+    description: "הדרכה על כלי שחזור וגיבוי לשימוש עצמאי"
+  }
+];
 
 export const PricingPage = () => {
   const openWhatsApp = () => {
